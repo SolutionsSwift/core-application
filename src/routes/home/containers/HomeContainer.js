@@ -8,7 +8,7 @@ import Home from "../components/Home";
 import { dispatchAction } from "../modules/actionCreators";
 
 // Selectors
-import { selectState, selectApiStatus } from "../modules/selectors";
+import { selectApiStatus } from "../modules/selectors";
 
 /**
  * Selectors: select something from the state and pass it through as prop
@@ -17,8 +17,8 @@ import { selectState, selectApiStatus } from "../modules/selectors";
  * @returns {{location: *}}
  */
 const mapStateToProps = (state, ownProps) => {
+    // @TODO: implement reselect inside selectApiStatus...
     return {
-        state: selectState(state),
         statusApi: selectApiStatus(state)
     };
 };

@@ -7,13 +7,12 @@ import React from "react";
  * @returns {void | *}
  * @constructor
  */
-const Home = props =>
-    console.log(props) || (
-        <div onClick={props.dispatchAction}>
+const Home = ({dispatchAction, statusApi}) => (
+        <div onClick={dispatchAction}>
             <p>Click here to call API</p>
             <p>
                 The status of the API request:{" "}
-                <span className={props.statusApi}> {props.statusApi}</span>
+                <span className={statusApi}> {statusApi}</span>
             </p>
         </div>
     );

@@ -1,4 +1,5 @@
-import { takeLatest } from "redux-saga/effects";
+// Modules
+import { takeEvery, fork } from "redux-saga/effects";
 
 // Sagas
 import { dispatchSaga } from "../routes/home/modules/sagas";
@@ -8,6 +9,12 @@ import { dispatchSaga } from "../routes/home/modules/sagas";
  * @returns {IterableIterator<*|ForkEffect>}
  */
 export function* rootSaga() {
-    yield takeLatest("DISPATCH", dispatchSaga);
+    // for logging purposes...
+    yield takeEvery("*", logActionType);
+
+    // route sagas
+    yield fork(dispatchSaga);
 }
+
+const logActionType = ({type, payload}) => console.debug(' *** Action is dispatched now! *** ', type);
 

@@ -1,7 +1,8 @@
 // Modules
 import { connect } from "react-redux";
-import About from "../components/About";
+
 // Components
+import About from "../components/About";
 
 const mapStateToProps = (state, ownProps) => {
     return {

@@ -1,9 +1,4 @@
-/**
- * Simple Selector
- * @param state
- * @returns {*}
- */
-export const selectState = state => state;
+// import { createSelector } from 'reselect';
 
 /**
  * Selector: select the api status
