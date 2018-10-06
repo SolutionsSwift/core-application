@@ -23,7 +23,7 @@ class DateSelect extends React.Component {
     render() {
         const { state: { startDate } } = this;
         return (
-            <div style={{ widht: "250px" }}>
+            <div style={{ width: "250px" }}>
                 <DatePicker
                     selected={startDate}
                     onChange={this.handleChange}

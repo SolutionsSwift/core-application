@@ -7,7 +7,11 @@ import React from "react";
  * @returns {void | *}
  * @constructor
  */
-const Home = ({dispatchAction, statusApi}) => (
+const Home = (props) => {
+
+    const {dispatchAction, statusApi} = props;
+    
+    return (
         <div onClick={dispatchAction}>
             <p>Click here to call API</p>
             <p>
@@ -16,5 +20,5 @@ const Home = ({dispatchAction, statusApi}) => (
             </p>
         </div>
     );
-
+}
 export default Home;

@@ -10,7 +10,7 @@ const headers = {
         //Authorization:
         //Add Token here
     }
-}
+};
 
 /**
  * Saga that handles GET requests
